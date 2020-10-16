@@ -8,7 +8,7 @@ function cakeReducer(prevState = initialSate, action) {
     switch (action.type) {
         case BUY_CAKE: return {
             ...prevState,
-            numOfCakes: prevState.numOfCakes > 0 ? prevState.numOfCakes - 1 : 0
+            numOfCakes: prevState.numOfCakes > 0 ? prevState.numOfCakes - action.payload : 0
         };
         default: return prevState;
     }
